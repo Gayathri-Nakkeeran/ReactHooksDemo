@@ -1,11 +1,19 @@
-//import { createContext } from "react";
-// import {contextDemo} from '../App.jsx';
+import { useContext } from "react";
+ import {contextDemo} from '../App.jsx';
+ import Button from './child2.jsx'; 
 export default function Child1(){
-    // const {passedValue} = contextDemo.count;
+    const {count} = useContext(contextDemo);
     return (
         <>
-        Child
-        {/* {passedValue} */}
+        <p>Inside Child1</p>
+        Passed value is <br>
+        </br>
+        {count}
+        <br></br>
+        Inside Child2
+        <Button/>
+        Child2 Completed
+        <p>Child1 Completed</p>
         </>
     );
 
